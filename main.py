@@ -11,6 +11,7 @@ from scipy.sparse import hstack
 from sklearn.model_selection import cross_val_score,learning_curve
 import matplotlib.pyplot as plt
 
+
 import os
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
@@ -83,6 +84,7 @@ vectorizer = TfidfVectorizer()
 X_vectors = vectorizer.fit_transform(X)
 classifier = MultinomialNB(alpha=1.0)
 classifier.fit(X_vectors, y)
+
 def predict_label(input_title):
     input_text = "" 
     input_data = input_title + " " + input_text
