@@ -12,9 +12,12 @@ from sklearn.model_selection import cross_val_score,learning_curve
 import matplotlib.pyplot as plt
 
 import os
+
 for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         print(os.path.join(dirname, filename))
+
+
 
 true=pd.read_csv("/kaggle/input/fake-and-real-news-dataset/True.csv")
 fake=pd.read_csv("/kaggle/input/fake-and-real-news-dataset/Fake.csv")
